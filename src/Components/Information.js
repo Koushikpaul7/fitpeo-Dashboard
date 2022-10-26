@@ -79,7 +79,7 @@ const Information = () => {
           </div>
         </div>
       </div>
-      <div className='lg:flex bg-white p-5'>
+      <div className='lg:flex bg-white rounded-lg p-5'>
        <div className=''>
        <p className='text-xl  mb-5'>Overview</p>
         <p className='text-sm'>This month</p>
@@ -157,9 +157,20 @@ const Information = () => {
       </div>
 
       {/* rest all graphs */}
-      <div className='grid lg:grid-cols-3 gap-5 mt-10  p-5'>
+      <div className='grid lg:grid-cols-3 gap-5 mt-10 '>
             <div className='card bg-white p-1'>
-            <BarChart className='' width={280} height={250} data={data}>
+              <div className='flex justify-between py-3 px-2'>
+                <p className='font-bold'>User activity</p>
+                <small>
+                <select name="Weekly">
+                  <option value="Weekly">Weekly</option>
+                  <option value="Monthly">Monthly</option>
+                  <option value="Yearly">Yearly</option>
+                </select>
+                </small>
+
+              </div>
+            <BarChart className='' width={280} height={350} data={data}>
   <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="name" />
   <YAxis />
@@ -170,7 +181,12 @@ const Information = () => {
 </BarChart>
             </div>
             <div className='card bg-white p-1'>
-            <PieChart width={250} height={250}>
+            <div className='flex justify-between py-3 px-2'>
+                <p className='font-bold'>Order stats</p>
+                <p className='font-bold'>...</p>
+
+              </div>
+            <PieChart width={250} height={350}>
   <Pie data={data} dataKey="amt" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
   <Pie data={data} dataKey="uv" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
 </PieChart>
@@ -187,23 +203,88 @@ const Information = () => {
 </select>
               </div>
             </div>
+            <div className='flex justify-between py-3'>
+                <div className='flex items-center '>
+                    <div className='mr-2 p-1 bg-blue-500 font-bold rounded text-white'>#1</div>
+                    <div>
+                      <p><small> Polo t-shirt for men</small></p>
+                      <p className='font-bold'><small>$ 25.4</small></p>
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                  <small><p className='bg-slate-200 px-3 rounded'>3.2k</p></small>
+                  </div>
+            </div>
+            <div className='flex justify-between py-3'>
+                <div className='flex items-center '>
+                    <div className='mr-2 p-1 bg-blue-500 font-bold rounded text-white'>#2</div>
+                    <div>
+                      <p><small> Hoodie for men</small></p>
+                      <p className='font-bold'><small>$ 25.4</small></p>
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                  <small><p className='bg-slate-200 px-3 rounded'>3.2k</p></small>
+                  </div>
+            </div>
+            <div className='flex justify-between py-3'>
+                <div className='flex items-center '>
+                    <div className='mr-2 p-1 bg-blue-500 font-bold rounded text-white'>#3</div>
+                    <div>
+                      <p><small> Blue T-shirt</small></p>
+                      <p className='font-bold'><small>$ 25.4</small></p>
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                  <small><p className='bg-slate-200 px-3 rounded'>3.2k</p></small>
+                  </div>
+            </div>
+            <div className='flex justify-between py-3'>
+                <div className='flex items-center '>
+                    <div className='mr-2 p-1 bg-blue-500 font-bold rounded text-white'>#4</div>
+                    <div>
+                      <p><small> Harem Pants</small></p>
+                      <p className='font-bold'><small>$ 25.4</small></p>
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                  <small><p className='bg-slate-200 px-3 rounded'>3.2k</p></small>
+                  </div>
+            </div>
+            <div className='flex justify-between py-3'>
+                <div className='flex items-center '>
+                    <div className='mr-2 p-1 bg-blue-500 font-bold rounded text-white'>#5</div>
+                    <div>
+                      <p><small> Jeans pants for women</small></p>
+                      <p className='font-bold'><small>$ 25.4</small></p>
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                  <small><p className='bg-slate-200 px-3 rounded'>3.2k</p></small>
+                  </div>
+            </div>
             </div>
       </div>
 
         </div>
 
         {/* second portion of screen */}
-        <div className='col-span-1 p-3 mt-4 lg:flex-row flex-col'>
+        <div className='col-span-1 mt-3 lg:flex-row flex-col'>
         <div className="card w-full bg-base-100 shadow-xl">
   <figure>
     <img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
   <div className="card-body">
   <div className="avatar">
-  <div className="w-24 rounded-full mx-auto m-[-50px] h-24">
+  <div className="w-24 rounded-full mx-auto mt-[-70px] h-24">
     <img src="https://placeimg.com/192/192/people" />
   </div>
 </div>
-      <div className='text-center mt-20'>
+      <div className='text-center mt-10'>
         <p className='text-xl'>Jeniffer Bennett</p>
         <p>Product Designer</p>
       </div>
@@ -227,6 +308,35 @@ const Information = () => {
        <p>26,256</p>
       <p className='text-gray-400 mb-3'><small>Earnings this month</small></p>
       <small className='text-gray-400'><span className='text-green-600 bg-green-300 rounded-lg p-1 mr-2'>2.24%</span>From previous period</small>
+     </div>
+     <div className="divider"></div>
+     <p className='text-left font-semibold mb-2'>Recent activity</p>
+     <div className='flex justify-between'>
+      <div className='bg-gray-200 px-2 font-semibold rounded mr-8 text-center'>
+        <p>12</p>
+        <p>sep</p>
+      </div>
+        <div>
+        <p><small>Lorem ipsum dolor sit amet</small></p>
+        </div>
+     </div>
+     <div className='flex justify-between'>
+      <div className='bg-gray-200 px-2 font-semibold rounded mr-8 text-center'>
+        <p>11</p>
+        <p>sep</p>
+      </div>
+        <div>
+        <p><small>Lorem ipsum dolor sit amet</small></p>
+        </div>
+     </div>
+     <div className='flex justify-between'>
+      <div className='bg-gray-200 px-2 font-semibold rounded mr-8 text-center'>
+        <p>10</p>
+        <p>sep</p>
+      </div>
+        <div>
+        <p><small>Lorem ipsum dolor sit amet</small></p>
+        </div>
      </div>
   </div>
 </div>
