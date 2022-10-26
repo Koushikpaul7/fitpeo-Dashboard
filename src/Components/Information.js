@@ -222,7 +222,12 @@ const Information = () => {
         <p>Earning</p>
         <AiOutlineInfoCircle className='mt-2'/>
       </div>
-      <div className="radial-progress text-blue-400" style={{"--value":70}}>70%</div>
+      <div className="radial-progress text-blue-400 mx-auto mt-3" style={{"--value":70}}>70%</div>
+     <div className='text-center'>
+       <p>26,256</p>
+      <p className='text-gray-400 mb-3'><small>Earnings this month</small></p>
+      <small className='text-gray-400'><span className='text-green-600 bg-green-300 rounded-lg p-1 mr-2'>2.24%</span>From previous period</small>
+     </div>
   </div>
 </div>
         </div>
