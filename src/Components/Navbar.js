@@ -3,9 +3,9 @@ import React from 'react';
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-#F8F8FF">
   <div className="flex-1">
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <a className="btn btn-ghost normal-case text-xl">Dashboard</a>
   </div>
   <div className="flex-none">
     <div className="dropdown dropdown-end">

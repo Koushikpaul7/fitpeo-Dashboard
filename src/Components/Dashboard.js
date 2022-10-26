@@ -15,9 +15,9 @@ const Dashboard = () => {
 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-    <ul className="menu p-4 overflow-y-auto w-72 bg-gray-900 text-white">
+    <ul className="menu p-4  w-72 bg-gray-900 text-white">
     <p className='text-left text-gray-400'><small>Menu</small></p><br />
-    <div class="accordion" id="accordionExample5">
+    <div class="accordion overflow-x-hidden" id="accordionExample5">
   <div class="accordion-item bg-gray-900">
     <h2 class="accordion-header mb-0" id="headingOne5">
       <button class="

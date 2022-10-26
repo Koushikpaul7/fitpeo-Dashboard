@@ -1,6 +1,7 @@
 import React from 'react';
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
+import Navbar from '../Components/Navbar'
 const Information = () => {
     const data = [
         {
@@ -47,7 +48,8 @@ const Information = () => {
         }
       ]
     return (
-       <section className='mx-4'>
+       <section className='mx-4 mt-4'>
+        <Navbar/>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
         <div className='col-span-3 '>
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
@@ -56,8 +58,9 @@ const Information = () => {
             <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
           </div>
           <div class="text-right">
-            <p class="text-2xl">1,257</p>
-            <p>Users</p>
+          <p class="text-2xl">Revenue</p>
+            <p >$12,257</p>
+           
           </div>
         </div>
         <div class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
@@ -65,8 +68,8 @@ const Information = () => {
             <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
           </div>
           <div class="text-right">
-            <p class="text-2xl">557</p>
-            <p>Projects</p>
+          <p class="text-2xl">Orders</p>
+            <p >5,643</p>
           </div>
         </div>
         <div class="bg-blue-500 dark:bg-gray-800 shadow-lg rounded-md flex items-center justify-between p-3 border-b-4 border-blue-600 dark:border-gray-600 text-white font-medium group">
@@ -74,14 +77,25 @@ const Information = () => {
             <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="stroke-current text-blue-800 dark:text-gray-800 transform transition-transform duration-500 ease-in-out"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
           </div>
           <div class="text-right">
-            <p class="text-2xl">$11,257</p>
-            <p>Total Tasks</p>
+          <p class="text-2xl">Customers</p>
+            <p >$45,257</p>
           </div>
         </div>
       </div>
+      <div className='flex justify-between py-3 px-2 bg-white rounded-lg'>
+                <p className='font-bold'>User activity</p>
+                <small>
+                <select name="Weekly">
+                  <option value="Weekly">Weekly</option>
+                  <option value="Monthly">Monthly</option>
+                  <option value="Yearly">Yearly</option>
+                </select>
+                </small>
+
+              </div>
       <div className='lg:flex bg-white rounded-lg p-5'>
        <div className=''>
-       <p className='text-xl  mb-5'>Overview</p>
+      
         <p className='text-sm'>This month</p>
         <p className='text-2xl font-semibold'>22,789</p>
         <div className='w-64'>
@@ -134,8 +148,8 @@ const Information = () => {
 </div>
         </div>
        </div>
-
-      <AreaChart width={300} className='lg:w-[600px]' height={370} data={data}
+      <ResponsiveContainer width='95%'  height={370} className='lg:chart-style'>
+      <AreaChart data={data}
   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
   <defs>
     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -154,6 +168,7 @@ const Information = () => {
   <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
   <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
 </AreaChart>
+</ResponsiveContainer>
       </div>
 
       {/* rest all graphs */}
