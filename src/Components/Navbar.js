@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
     return (
@@ -6,6 +7,7 @@ const Navbar = () => {
             <div className="navbar bg-#F8F8FF">
   <div className="flex-1">
     <a className="btn btn-ghost normal-case text-xl">Dashboard</a>
+    <label htmlFor="my-drawer-2" className="btn drawer-button lg:hidden"> <AiOutlineMenu></AiOutlineMenu> </label>
   </div>
   <div className="flex-none">
     <div className="dropdown dropdown-end">

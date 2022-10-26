@@ -185,7 +185,8 @@ const Information = () => {
                 </small>
 
               </div>
-            <BarChart className='' width={280} height={350} data={data}>
+              <ResponsiveContainer width='95%' height={350}>
+            <BarChart className=''  data={data}>
   <CartesianGrid strokeDasharray="3 3" />
   <XAxis dataKey="name" />
   <YAxis />
@@ -194,6 +195,7 @@ const Information = () => {
   <Bar dataKey="pv" fill="#8884d8" />
   <Bar dataKey="uv" fill="#82ca9d" />
 </BarChart>
+</ResponsiveContainer>
             </div>
             <div className='card bg-white p-1'>
             <div className='flex justify-between py-3 px-2'>
@@ -201,10 +203,12 @@ const Information = () => {
                 <p className='font-bold'>...</p>
 
               </div>
+              <ResponsiveContainer width='95%' height={350}>
             <PieChart width={250} height={350}>
   <Pie data={data} dataKey="amt" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
   <Pie data={data} dataKey="uv" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
 </PieChart>
+</ResponsiveContainer>
             </div>
             <div className='card bg-white p-3'>
               <div className='flex justify-between'>
